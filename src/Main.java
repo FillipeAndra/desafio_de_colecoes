@@ -54,6 +54,6 @@ public class Main {
         for (int i = 0; i < lista.size(); i++){
             System.out.println(lista.get(i));
         }
-        System.out.println("Limite disponível do cartão ao fim das compras: "+usuario.getLimiteDisponivel());
+        System.out.println("Limite disponível no cartão ao fim das compras: "+usuario.getLimiteDisponivel());
     }
 }
