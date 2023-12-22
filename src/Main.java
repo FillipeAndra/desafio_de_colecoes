@@ -14,10 +14,10 @@ public class Main {
         System.out.println("Por favor digite o limite do seu cartão para realizar as suas compras.");
         double limite = leitorU.nextDouble();
         Usuario usuario = new Usuario(nome,limite);
-        System.out.println("Vamos As compras!");
+        System.out.println("Vamos às compras!");
+        System.out.println("Digite 0 para parar de comprar ou 1 para continuar");
+        escolha = leitorU.nextInt();
         while(true){
-            System.out.println("Digite 0 para parar de comprar ou 1 para continuar");
-            escolha = leitorU.nextInt();
             if (escolha == 1){
                 System.out.println("Digite o nome do produto a ser comprado");
                 String nomeProduto = leitorP.nextLine();
@@ -25,6 +25,7 @@ public class Main {
                 double valorProduto = leitorP.nextDouble();
                 leitorP.nextLine();
                 double retorno = usuario.calculoSaldo(valorProduto);
+                escolha = -1;
                 if (retorno == 1){
                     lista.add(new Produto(nomeProduto, valorProduto));
                     System.out.println("Compa realizada com sucesso!");
